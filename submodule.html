@@ -50,6 +50,7 @@
 
   <!-- Your styles -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/custom.css">
 </head>
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -63,6 +64,7 @@
       </div>
       <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
         <a href="#overview" class="mdl-layout__tab is-active">Bacon</a>
+        <a href="#checkout" class="mdl-layout__tab">Checkout</a>
       </div>
     </header>
     <main class="mdl-layout__content">
@@ -72,6 +74,124 @@
         </section>
         <section id="bacon-container" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
           <img id="bacon-img" src="http://media.washtimes.com.s3.amazonaws.com/media/image/2015/02/23/bacon.jpg" alt="Bacon" style="width: 100%; height: 100%;">
+        </section>
+      </div>
+      <div class="mdl-layout__tab-panel mdl-color--grey-200" id="checkout">
+        <section class="section--center mdl-grid">
+          <form action="#" class="mdl-cell--8-col mdl-grid--no-spacing">
+            <header class="mdl-cell--12-col">
+              <h6 class="mdl-typography--font-bold mdl-typography--text-uppercase mdl-color-text--black">
+                <span class="mdl-badge mdl-badge--overlap" data-badge="1"></span>
+                personal information
+              </h6>
+            </header>
+            <div class="mdl-cell--12-col mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-color--white mdl-textfield__container border-b radius-3">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input type="text" class="mdl-textfield__input" id="firstname" placeholder="Elon">
+                  <label for="firstname" class="mdl-textfield__label">First Name</label>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-color--white mdl-textfield__container border-b radius-3">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input type="text" class="mdl-textfield__input" id="lastname" placeholder="Musk">
+                  <label for="lastname" class="mdl-textfield__label">Last Name</label>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--12-col mdl-color--white mdl-textfield__container border-b radius-3">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input type="text" class="mdl-textfield__input" id="email" placeholder="elon@spacex.com">
+                  <label for="email" class="mdl-textfield__label">Email</label>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-color--white mdl-textfield__container border-b radius-3">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <select type="text" class="mdl-textfield__input" id="country">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <label for="country" class="mdl-textfield__label">Country</label>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-color--white mdl-textfield__container border-b radius-3">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input type="text" class="mdl-textfield__input" id="postalcode" placeholder="10001">
+                  <label for="postalcode" class="mdl-textfield__label">Postal Code</label>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--12-col mdl-color--white mdl-textfield__container border-b radius-3">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input type="text" class="mdl-textfield__input" id="phone" placeholder="(212) 692-93-92">
+                  <label for="phone" class="mdl-textfield__label">Phone Number</label>
+                </div>
+              </div>
+            </div>
+            <header class="mdl-cell--12-col">
+              <h6 class="mdl-typography--font-bold mdl-typography--text-uppercase mdl-color-text--black">
+                <span class="mdl-badge mdl-badge--overlap" data-badge="2"></span>
+                payments details
+                <span class="material-icons mdl-color-text--grey-800">lock</span>
+              </h6>
+            </header>
+            <div class="mdl-cell--12-col mdl-grid">
+              <div class="mdl-cell mdl-cell--12-col mdl-color--white mdl-textfield__container border-b radius-3 credit-card-container">
+                <img id="visa-badge" src="images/visa-badge.jpg" alt="Visa">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input type="text" class="mdl-textfield__input" id="credit-card" placeholder="0000 - 0000 - 0000 - 0000">
+                  <label for="credit-card" class="mdl-textfield__label">Credit Card Number</label>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-color--white mdl-textfield__container border-b radius-3">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input type="password" class="mdl-textfield__input" id="credit-security" placeholder="***" autocomplete="new-password">
+                  <label for="credit-security" class="mdl-textfield__label">Security code</label>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-color--white mdl-textfield__container border-b radius-3">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input type="text" class="mdl-textfield__input" id="expiration-date" placeholder="MM / YY">
+                  <label for="expiration-date" class="mdl-textfield__label">Expiration date</label>
+                </div>
+              </div>
+              <button type="submit" class="mdl-cell mdl-cell--12-col border-b radius-3 mdl-button mdl-js-button bg-green border-green border-b mdl-color-text--white mdl-typography--text-uppercase mdl-typography--font-bold">
+                <span class="material-icons">shopping_cart</span>
+                Complete purchase
+              </button>
+            </div>
+          </form>
+          <div class="mdl-cell--4-col mdl-grid mdl-grid--no-spacing your-order mdl-color--white mdl-color-text--black border-b radius-3">
+            <div class="mdl-cell--12-col radius-3">
+              <h6 class="mdl-typography--font-bold mdl-typography--text-uppercase">
+                your order
+              </h6>
+              <ul class="mdl-color-text--black">
+                <li>
+                  <span class="name">Apple Watch Sport</span>
+                  <span class="price">$ 580</span>
+                </li>
+                <li>
+                  <span class="name">Modern Buckle</span>
+                  <span class="price">$ 380</span>
+                </li>
+              </ul>
+              <hr>
+              <p class="split-text">
+                <span>Total purchases</span>
+                <span>$ 960.00</span>
+              </p>
+              <p class="split-text">
+                <span>Estimated tax</span>
+                <span>$ 0</span>
+              </p>
+              <hr>
+              <div class="split-text">
+                <h6 class="mdl-typography--font-bold">Total</h6>
+                <h4 class="mdl-typography--font-bold">$ 960</h4>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
       <footer class="mdl-mega-footer">
